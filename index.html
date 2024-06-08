@@ -1,116 +1,102 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Revolutionize your game server management for Minecraft and Rust with our all-in-one tool. Join our beta to test player analytics, in-game features, and cross-game modules.">
+  <meta name="keywords" content="game server management, player analytics, beta testing, gaming community">
+  <title>Takaro - Revolutionize Your Game Server Management</title>
+  <link href="public/styles.css" rel="stylesheet">
   <style>
-    body {
-      font-family: Arial, sans-serif;
-      background-color: #151515;
-      color: #c2c2c2;
-      margin: 0;
-      padding: 0;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
+    .section:nth-child(odd) {
+      background-color: #2A2A40; /* Darker purple shade */
     }
-
-    .center {
-      text-align: center;
-      max-width: 600px;
-      margin: 0 auto;
+    .section:nth-child(even) {
+      background-color: #1E1E30; /* Dark greyish shade */
     }
-
-    .header {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-
-    h1 {
-      color: #c2c2c2;
-      font-size: 2em;
-      margin: 0.67em 0;
-      margin-left: 0.5em;
-    }
-
-    p {
-      color: #818181;
-    }
-
-    ul {
-      list-style-type: none;
-      padding: 0;
-    }
-
-    ul li {
-      padding: 0.5em 0;
-      color: #c2c2c2;
-    }
-
-    .inputContainer {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      margin-top: 2em;
-    }
-
-    input[type="email"] {
-      padding: 1em;
-      font-size: 1em;
-      border: none;
-      border-radius: 5px;
-      color: #c2c2c2;
-      background-color: #202020;
-      width: 100%;
-      box-sizing: border-box;
-      margin-bottom: 1em;
-    }
-
-    input[type="submit"] {
-      padding: 1em 2em;
-      font-size: 1em;
-      border: none;
-      border-radius: 5px;
-      background-color: #664DE5;
-      color: #ffffff;
-      cursor: pointer;
-      transition: background-color 0.3s ease;
-      width: 100%;
-      box-sizing: border-box;
-    }
-
-    input[type="submit"]:hover {
-      background-color: #be81f6;
-    }
-
-    svg {
-      margin-bottom: 1em;
+    .section {
+      padding: 2rem;
+      border-radius: 0.5rem;
+      margin-bottom: 1.5rem;
     }
   </style>
 </head>
 
-<body>
-  <div class="center">
-    <div class="header">
-      <svg xmlns="http://www.w3.org/2000/svg" fill="#664de5" height="35" width="35" viewBox="0 0 512 512">
-        <path
-          d="M512 165.4c0 127.9-70.05 235.3-175.3 270.1c-20.04 7.938-41.83 12.46-64.69 12.46c-64.9 0-125.2-36.51-155.7-94.47c-54.13 49.93-68.71 107-68.96 108.1C44.72 472.6 34.87 480 24.02 480c-1.844 0-3.727-.2187-5.602-.6562c-12.89-3.098-20.84-16.08-17.75-28.96c9.598-39.5 90.47-226.4 335.3-226.4C344.8 224 352 216.8 352 208S344.8 192 336 192C228.6 192 151 226.6 96.29 267.6c.1934-10.82 1.242-21.84 3.535-33.05c13.47-65.81 66.04-119 131.4-134.2c28.33-6.562 55.68-6.013 80.93-.0054c56 13.32 118.2-7.412 149.3-61.24c5.664-9.828 20.02-9.516 24.66 .8282C502.7 76.76 512 121.9 512 165.4z" />
+<body class="bg-gray-900 text-gray-300">
+  <div class="max-w-4xl mx-auto p-8">
+    <div class="flex flex-col items-center mb-12">
+      <svg xmlns="http://www.w3.org/2000/svg" fill="#664de5" height="70" width="70" viewBox="0 0 512 512">
+        <path d="M512 165.4c0 127.9-70.05 235.3-175.3 270.1c-20.04 7.938-41.83 12.46-64.69 12.46c-64.9 0-125.2-36.51-155.7-94.47c-54.13 49.93-68.71 107-68.96 108.1C44.72 472.6 34.87 480 24.02 480c-1.844 0-3.727-.2187-5.602-.6562c-12.89-3.098-20.84-16.08-17.75-28.96c9.598-39.5 90.47-226.4 335.3-226.4C344.8 224 352 216.8 352 208S344.8 192 336 192C228.6 192 151 226.6 96.29 267.6c.1934-10.82 1.242-21.84 3.535-33.05c13.47-65.81 66.04-119 131.4-134.2c28.33-6.562 55.68-6.013 80.93-.0054c56 13.32 118.2-7.412 149.3-61.24c5.664-9.828 20.02-9.516 24.66 .8282C502.7 76.76 512 121.9 512 165.4z" />
       </svg>
-      <h1>Takaro</h1>
+      <h1 class="text-4xl font-bold text-center mt-4">Takaro</h1>
     </div>
-    <p>Sign up to be notified when we launch</p>
-    <ul>
-      <li>Support for 7 Days to Die, Rust and Minecraft!</li>
-      <li>New modules system, extending CSMMs custom commands and hooks to a whole new level!</li>
-      <li>Roles, economy and much more</li>
-    </ul>
-    <div class="inputContainer">
-      <form name="contact" method="POST" data-netlify="true">
-        <input required type="email" id="email" name="email" placeholder="Enter your email">
-        <input type="submit" value="Join the waitlist">
-      </form>
+
+  <!-- Introduction Section -->
+  <section class="mb-12 section">
+    <div class="content-wrapper">
+      <h2 class="text-3xl font-semibold mb-4">🌟 A New Era of Game Server Management 🌟</h2>
+      <p class="mb-6">🎮 Manage your game servers for Minecraft and Rust effortlessly with our all-in-one tool.</p>
+      <p class="mb-6">📊 Track player activity and gain deep insights into your gaming community.</p>
+      <div class="inputContainer">
+        <form name="contact" method="POST" data-netlify="true" class="flex flex-col items-center">
+          <input required type="email" id="email" name="email" placeholder="Enter your email" class="p-4 text-lg bg-gray-800 rounded-md w-full mb-4">
+          <input type="submit" value="Join the waitlist" class="p-4 text-lg bg-purple-600 text-white rounded-md cursor-pointer hover:bg-purple-700 w-full">
+        </form>
+      </div>
     </div>
+  </section>
+
+    <!-- Features Section -->
+    <section class="mb-12 section">
+      <h2 class="text-3xl font-semibold mb-4">🚀 Why Join Our Beta? 🚀</h2>
+      <ul class="space-y-6">
+        <li>
+          <h3 class="text-xl font-medium">📊 Player Analytics</h3>
+          <p>Access comprehensive player data including hours played, kills made, and more.</p>
+        </li>
+        <li>
+          <h3 class="text-xl font-medium">🧩 Cross-Game Modules</h3>
+          <p>Enhance your servers with custom modules like teleport and lottery.</p>
+        </li>
+        <li>
+          <h3 class="text-xl font-medium">🎁 Loyalty Rewards</h3>
+          <p>Reward loyal players with perks and digital assets across different game servers.</p>
+        </li>
+      </ul>
+    </section>
+
+    <!-- Customization & Flexibility Section -->
+    <section class="mb-12 section">
+      <h2 class="text-3xl font-semibold mb-4">🔧 Fully Customizable and Community-Driven 🔧</h2>
+      <p>Our platform supports modules that can be developed by us or by the community, allowing for endless customization and new possibilities. Make your servers truly unique.</p>
+    </section>
+
+    <!-- Cross-Game Integration Section -->
+    <section class="mb-12 section">
+      <h2 class="text-3xl font-semibold mb-4">🎮 Seamless Cross-Game Experience 🎮</h2>
+      <p>Manage multiple game servers from one platform. Track and reward player progress across different games, making your gaming community more cohesive and engaging.</p>
+    </section>
+
+    <!-- How It Works Section -->
+    <section class="mb-12 section">
+      <h2 class="text-3xl font-semibold mb-4">⚙️ Simple Setup, Powerful Results ⚙️</h2>
+      <p class="mb-6">Setting up your server management tool is easy. Integrate with your existing servers and start managing everything from a single dashboard.</p>
+      <div class="inputContainer mb-12">
+        <form name="contact" method="POST" data-netlify="true" class="flex flex-col items-center">
+          <input required type="email" id="email" name="email" placeholder="Enter your email" class="p-4 text-lg bg-gray-800 rounded-md w-full mb-4">
+          <input type="submit" value="Join the waitlist" class="p-4 text-lg bg-purple-600 text-white rounded-md cursor-pointer hover:bg-purple-700 w-full">
+        </form>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="flex flex-col items-center mt-12">
+      <svg xmlns="http://www.w3.org/2000/svg" fill="#664de5" height="50" width="50" viewBox="0 0 512 512" class="mb-4">
+        <path d="M512 165.4c0 127.9-70.05 235.3-175.3 270.1c-20.04 7.938-41.83 12.46-64.69 12.46c-64.9 0-125.2-36.51-155.7-94.47c-54.13 49.93-68.71 107-68.96 108.1C44.72 472.6 34.87 480 24.02 480c-1.844 0-3.727-.2187-5.602-.6562c-12.89-3.098-20.84-16.08-17.75-28.96c9.598-39.5 90.47-226.4 335.3-226.4C344.8 224 352 216.8 352 208S344.8 192 336 192C228.6 192 151 226.6 96.29 267.6c.1934-10.82 1.242-21.84 3.535-33.05c13.47-65.81 66.04-119 131.4-134.2c28.33-6.562 55.68-6.013 80.93-.0054c56 13.32 118.2-7.412 149.3-61.24c5.664-9.828 20.02-9.516 24.66 .8282C502.7 76.76 512 121.9 512 165.4z" />
+      </svg>
+      <p class="text-lg font-medium">Takaro - Revolutionize Your Game Server Management</p>
+    </footer>
   </div>
 </body>
 
